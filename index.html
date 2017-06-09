@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="ed_icon.png" sizes="1500x1500" type="image/png">
+<title>Edchemy</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/796fc9d088.js"></script>
+<style>
+	body {
+		font: 400 15px/1.8 Lato, sans-serif;
+		color: #777;
+	}
+	h1{
+		font-size: 1.4vw; 
+	} 
+	h2{
+		letter-spacing: 2px;   
+		color: #777;
+		font-size: 1.4vw; 
+	}
+	h3{
+		margin: 10px 0 30px 0;
+		letter-spacing: 10px;      
+		font-size: 20px;
+		color: #00664d;
+	}
+	h4 {
+		margin: 3px ;      
+		font-size: 20px;  
+		line-height: 1.375em;
+		color: #303030;
+		font-weight: 400;
+	}  
+	h5 {
+		margin: 5px ;
+		letter-spacing: 5px;      
+		font-size: 20px;
+		color: #111;
+	} 
+	.container {
+		padding: 30px 120px;
+	}
+	.setup {
+		border: 10px solid transparent;
+		margin-bottom: 25px;
+		width: 80%;
+		height: 80%;
+		opacity: 0.7;
+	}
+	.setup:hover {
+		border-color: #ccfff2;
+	}
+	.carousel-inner img {
+		width: 100%; /* Set width to 100% */
+		height=100px;
+		margin: fixed;
+	}
+	.nav-tabs li a {
+		color: #00664d;
+	} 
+	.navbar {
+		font-family: Montserrat, sans-serif;
+		margin-bottom: 0;
+		border: 0;
+		font-size: 11px !important;
+		font-weight:800;
+		letter-spacing: 2px;
+		opacity: 1;
+		background-color:#f2f2f2	;
+	}
+	.navbar li a, .navbar .navbar-brand { 
+		color: #a6a6a6 !important;
+	}
+	.navbar-nav li a:hover {
+		color: #333333!important;
+	}
+	.navbar-nav li.active a {
+		color: #00664d  !important ;
+		font-size: 13px !important;
+		font-weight : 800;
+	}
+	.navbar-default .navbar-toggle {
+		border-color: transparent;
+	}
+	footer {
+		background-color: #d9d9d9;
+		color: #333333!important;
+		padding: 12px;
+	}
+	.logo-small {
+		color: #00664d;
+		font-size: 50px;
+	}     
+	#thoughtCarousel {
+		color: #00664d;
+	} 
+	@media (max-width: 600px) {
+		.carousel-caption {
+		display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+		}
+	}		
+	.slideanim {visibility:hidden;}
+	.slide {
+		animation-name: slide;
+		-webkit-animation-name: slide;
+		animation-duration: 1s;
+		-webkit-animation-duration: 1s;
+		visibility: visible;
+	}
+	@keyframes slide {
+		0% {
+			opacity: 0;
+			transform: translateY(70%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0%);
+		}
+	}
+	@-webkit-keyframes slide {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(70%);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0%);
+		}
+	}
+</style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<nav class="navbar navbar-default navbar-fixed-top active">
+	<div class="container-fluid ">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+			<a class="navbar-brand" href="#myPage" style="padding-top: 5px;padding-bottom: 5px;"><img src="edchemy.png"  style="slideanim" width="140" height="45" onClick="window.location.reload()"> </a>
+		</div>
+		<div class="collapse navbar-collapse " id="myNavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#myPage" >Home</a></li>
+				<li><a href="#aboutus">ABOUT US</a></li>
+				<li><a href="#getin">GET IN</a></li>
+				<li><a href="#services">SERVICES</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div id="myCarousel " class="carousel slide " data-ride="carousel">
+	<ol class="carousel-indicators">
+	<li data-target="#myCarousel" data-slide-to="0" ></li>
+	<li data-target="#myCarousel" data-slide-to="1"></li>
+	<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<img src="simple.jpg" alt="New York" width="1200" height="700">
+			<div class="carousel-caption slideanim">
+				<h3 >We Make Your Journey More Simplified</h3>
+			</div>      
+		</div>
+		<div class="item">
+			<img src="digi_world.jpg" alt="Chicago" width="1200" height="700">
+			<div class="carousel-caption slideanim" >
+				<h3>We Help You To Update For The </h3> 
+				<h3>   Present DIGI World </h3>     
+			</div>
+		</div>
+		<div class="item">
+			<img src="convi.jpg" alt="Los Angeles" width="1200" height="700">
+			<div class="carousel-caption slideanim">
+				<h3>We ADD More Values For Your Convinence</h3>
+			</div>      
+		</div>
+	</div>
+</div>
+<div id="aboutus" class="container text-center">
+	<h2>EDCHEMY</h2>
+	<h5>What we are..?</h5>
+	<p><em>Edchemy’s vision is to engage with progressive schools and help them become digital schools.!</em></p>
+	<span class="glyphicon glyphicon-globe logo-small slideanim"></span>
+	<p>We believe schools will transform by innovating and leveraging digital technologies in teaching, administration, operations and in engaging parents. We believe we are the right partners to accelerate this journey and help schools realize their dreams of digitalization.</p>
+</div>
+<div id="getin" class="container text-center">
+	<div class="row">
+	<h2>GET IN</h2>
+	<h5>How to Get In..?</h5>	 
+	<div class="col-sm-4 slideanim">
+		<a href="#demo" data-toggle="collapse">
+		<img src="signup.ico" class="img-circle setup" alt="Random Name" width="255" height="255">
+		</a>
+		<div id="demo" class="collapse">
+			<p><em>Signup with a simple order</em></p>
+			<p><em>form and pay as you go.</em></p>
+		</div>
+	</div>
+	<div class="col-sm-4 slideanim">
+		<a href="#demo2" data-toggle="collapse">
+		<img src="platform.png" class="img-circle setup" alt="Random Name" width="255" height="255">
+		</a>
+		<div id="demo2" class="collapse">
+			<p><em>We will setup your school on </em></p>
+			<p><em>Edchemy platform in 3 Days.</em></p>
+		</div>
+	</div>
+		<div class="col-sm-4 slideanim">
+			<a href="#demo3" data-toggle="collapse">
+			<img src="guide.png" class="img-circle setup" alt="Random Name" width="255" height="255">
+			</a>
+			<div id="demo3" class="collapse">
+				<p><em>We can train your staff to operatialize Edchemy. Alternatively, we have partners who can help you with this.</em></p>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="services" class="container-fluid text-center">
+	<h2>OUR SERVICES</h2>
+	<h5>What we offer..?</h5>
+	<br>
+	<div class="row slideanim">
+		<div class="col-sm-3">
+			<span class="glyphicon glyphicon-dashboard logo-small slideanim"></span>
+			<h4>School Management </h4>
+			<p>Comprehensive school management system </p>
+			<p>for operational and administrative automation.</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Student Records</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Tests and Exams</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Progress Reports</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> CCE</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Fees</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Staff Records</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Transport</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Transfer Certificate</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Activity Clubs</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Assets</p>	  
+		</div>
+		<div class="col-sm-3">
+			<span class="glyphicon glyphicon-leaf logo-small slideanim"></span>
+			<h4>Digital Connect</h4>
+			<p>Connect with everyone through various  </p>
+			<p>communication channels and fully</p>
+			<p>automated online processes.</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Online Admissions</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Messages</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i>Publications</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Email</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> SMS</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Alerts</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Surveys</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Image Gallery</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Communities</p>  
+		</div>
+		<div class="col-sm-3">
+			<span class="glyphicon glyphicon-blackboard logo-small slideanim"></span>
+			<h4>Digital Classrooms</h4>
+			<p>A Digital companion for the class teachers</p>
+			<p>to engage students in learning and</p>
+			<p>leverage world class analytics</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Class Tests</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Student Analytics</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i>Lesson Plans</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Diary Logs</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Online Homeworks</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Online Assessments</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Schedule</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Attendance</p>  
+		</div>
+		<div class="col-sm-3">
+			<span class="glyphicon glyphicon-shopping-cart logo-small slideanim"></span>
+			<h4>Online Stores</h4>
+			<p>Complete automated solution for ordering to </p>
+			<p>home delivery for Books, Uniforms </p>
+			<p>and other school Accessories.</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Catalogues</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Orders</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i>Online orders</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Online Payments</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Home Delivery</p>
+			<p><i class="fa fa-check" style="color: #00897b;"></i> Multiple vendors and stores</p>	  
+		</div>	
+	</div>
+</div>
+<div id="contact" class="container">
+	<h2 class="text-center">CONTACT</h2>	
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<p><span class="glyphicon glyphicon-map-marker slideanim" style="color:#00664d"></span> Bengaluru, India</p>
+			<p><span class="glyphicon glyphicon-envelope slideanim"style="color:#00664d"></span> info@edchemy.com</p>
+		</div>
+	</div>
+</div>
+<div class="container slideanim" style=" height=100px; padding-left: 12px;padding-right: 12px;padding-top: 30px;padding-bottom: 30px; ">
+	<div id="thoughtCarousel" style="color:#00664d;" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner" >
+			<div class="item active">
+				<div class="pull-left"><h2>“Educating the Mind Without educating the heart is not an education at all...!!” </h2></div><br>
+				<div class="pull-right"><h1>- Aristotle</h1></div>
+			</div>	  
+			<div class="item">
+				<div class="pull-left"><h2>“Education is the best Friend, education beats the beauty and the youth...!!” </h2></div><br>
+				<div class="pull-right"><h1>- Chanakya</h1></div>
+			</div>
+			<div class="item">
+				<div class="pull-left"><h2>“Live as if you were to die tomorrow. Learn as if you were to live forever...!!” </h2></div><br>
+				<div class="pull-right"><h1>- Mahatma Gandhi</h1></div>
+			</div>
+			<div class="item">
+				<div class="pull-left"><h2>“Education is the most powerful weapon which you can use to change the world...!”</h2></div><br>
+				<div class="pull-right"><h1>- Nelson Mandela</h1></div>
+			</div>    
+			<div class="item">
+				<div class="pull-left"><h2>“Children must be taught how to think, not what to think...!!”</h2></div><br>
+				<div class="pull-right"><h1>-  Margaret Mead</h1></div>
+			</div>
+			<div class="item">
+				<div class="pull-left"><h2>“I have never let my schooling interfere with my education...!!”  </h2></div><br>
+				<div class="pull-right"><h1>-Mark Twain</h1></div>
+			</div>		  			  
+		</div>
+	</div>
+</div>
+<footer class="text-center slideanim ">
+	<a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+	<span class="glyphicon glyphicon-chevron-up  " style="color:#00664d"></span>
+	</a><br><br>
+	<p>© Copyright 2017. All Rights Reserved.  </p> 
+	<p style="margin-bottom: 0px;">Powered by<img src="edchemy.png"  width="100" height="35" onClick="window.location.reload()">   </p> 
+</footer>
+<script>
+	$(document).ready(function(){
+		$(this).scrollTop(0);
+		$('.carousel').carousel({
+		  interval: 1000 * 4
+		});	
+		$(window).scroll(function() {
+		  $(".slideanim").each(function(){
+			var pos = $(this).offset().top;
+			var winTop = $(window).scrollTop();
+			if (pos < winTop + 600) {
+			  $(this).addClass("slide");
+			}
+		  });
+		}); 	  
+	});
+</script>
+</body>
+</html>
